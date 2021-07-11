@@ -48,3 +48,20 @@ display: flex;
 justify-content: center;
 margin-top: 20px;
 }
+
+.buttons:hover { 
+    background-color: #21cc5a; 
+}
+
+.left-cat{
+    display: flex;
+    position:absolute;
+    top:0;
+    right:10%;
+}
+
+.right-cat{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
