@@ -1,8 +1,9 @@
-let calculator = document.querySelectorAll('.buttons')
+let calculator = document.querySelectorAll('.buttons');
+let result = document.querySelector('.result');
 
-/*calculator.forEach((x) => {
-    x.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*240+80)}, ${Math.floor(Math.random()*240+80)}, ${Math.floor(Math.random()*0)}, 1)`;
-        })
-    });
-*/
+calculator.forEach((e) => {
+    e.addEventListener('click', () =>{
+        result.textContent = e.textContent;
+    })
+})
+
