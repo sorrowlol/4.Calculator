@@ -56,7 +56,7 @@ calculator.forEach((e) => {
         });
     }
 
-    if (e.id === 'sum' || e.id === 'divide' || e.id === 'multiply' || e.id === 'substract'){
+    if (e.id === '+' || e.id === '/' || e.id === '*' || e.id === '-'){
         e.addEventListener('click', () => {
             result.textContent += ' ' + e.textContent + ' ';
             operatorr = e.id;
