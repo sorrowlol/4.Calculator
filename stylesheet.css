@@ -15,11 +15,12 @@ body > h1, h3{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
 }
-h1{
+
+h1 {
     margin-bottom: -20px;
 }
 
-h3{
+h3 {
     font-size: 16px;
     margin-bottom: 120px;
 }
@@ -54,6 +55,7 @@ h3{
     margin-right: -1px;
     margin-bottom: -1px;
     box-sizing: border-box;
+    border-radius: 25%;
 }
 
 .clear{
