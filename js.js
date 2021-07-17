@@ -30,16 +30,16 @@ function substract(a, b){
 
 //return calculation
 function operate(operator, a, b){
-    if (operator === 'sum'){
+    if (operator === '+'){
         return sum(a, b);
     }
-    else if (operator === 'multiply'){
+    else if (operator === '*'){
         return multiply(a, b);
     }
-    else if (operator === 'divide'){
+    else if (operator === '/'){
         return divide(a, b);
     }
-    else if (operator === 'substract'){
+    else if (operator === '-'){
         return substract(a, b);
     }
 }
@@ -51,7 +51,7 @@ calculator.forEach((e) => {
     if (e.id === 'number'){
 
         e.addEventListener('click', () =>{
-            result.textContent += e.textContent;
+            result.textContent += parseInt(e.textContent);
             displayValue1 = result.textContent;
         });
     }
@@ -78,6 +78,15 @@ calculator.forEach((x) => {
         })
     }
 });
+
+let resultsArr = [];
+
+equal.addEventListener('click', () =>{
+    resultsArr = result.textContent.split(' ');
+
+}
+);
+
 
 clear.addEventListener('click', () => {
     result.textContent = '';
