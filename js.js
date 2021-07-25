@@ -1,13 +1,12 @@
 let calculator = document.querySelectorAll('.buttons');
 let result = document.querySelector('.result');
-let clear = document.querySelector('.clear');
 let equal = document.querySelector('#equal');
 
 
    //store result
    let displayValue1;
    let displayValue2;
-   let operatorr;
+   let operator;
 
  
 
@@ -30,16 +29,16 @@ function substract(a, b){
 
 //return calculation
 function operate(operator, a, b){
-    if (operator === '+'){
+    if (operator === 'sum'){
         return sum(a, b);
     }
-    else if (operator === '*'){
+    else if (operator === 'multiply'){
         return multiply(a, b);
     }
-    else if (operator === '/'){
+    else if (operator === 'divide'){
         return divide(a, b);
     }
-    else if (operator === '-'){
+    else if (operator === 'substract'){
         return substract(a, b);
     }
 }
@@ -56,10 +55,10 @@ calculator.forEach((e) => {
         });
     }
 
-    if (e.id === '+' || e.id === '/' || e.id === '*' || e.id === '-'){
+    if (e.id === 'sum' || e.id === 'divide' || e.id === 'multiply' || e.id === 'substract'){
         e.addEventListener('click', () => {
             result.textContent += ' ' + e.textContent + ' ';
-            operatorr = e.id;
+            operator = e.id;
         })
     }
 
@@ -69,13 +68,20 @@ calculator.forEach((e) => {
 
     //rainbow effect
 calculator.forEach((x) => {
+
     if (x.id === 'number'){
     x.addEventListener('mouseover', (e) => {
         e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*512)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, 1)`;
         });
+    }
     x.addEventListener('mouseout', (e) =>{
-        e.target.style.backgroundColor = 'rgb(15, 15, 15)';
+        e.target.style.backgroundColor = 'black';
         })
+    
+    if (x.id === 'sum' || x.id === 'divide' || x.id === 'multiply' || x.id === 'substract'){
+        x.addEventListener('click', (e) => {
+            e.target.style.backgroundColor = 'green';
+        });
     }
 });
 
@@ -83,8 +89,7 @@ let resultsArr = [];
 
 equal.addEventListener('click', () =>{
     resultsArr = result.textContent.split(' ');
-
-}
+    }
 );
 
 
