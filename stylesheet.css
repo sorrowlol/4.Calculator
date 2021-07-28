@@ -30,9 +30,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
-    border-color: purple;
+    border-color: rgb(130, 110, 202);
     padding: 20px;
-    background-color: rgb(110, 202, 167);;
+    background-color: grey;;
+    border-radius: 30px;
 }
 
 .grid-calculator{
@@ -40,7 +41,7 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     text-align: center;
-    background-color: rgb(110, 202, 167);
+    background-color: grey;
     grid-gap: 10px;
     align-items: center;
     font-size: 16px;
@@ -52,7 +53,7 @@ h3 {
     line-height: 70px;
     border: 2px solid rgb(145, 10, 255);
     box-sizing: border-box;
-    border-radius: 10%;
+    border-radius: 10px;
     background-color: black;
 }
 
@@ -65,15 +66,16 @@ h3 {
     grid-column: span 4;
     border-style: solid;
     border-color: rgb(145, 10, 255);
+    border-radius: 10px;
 }
 
 .buttons{
     background-color: black;
     height: 70px;
     line-height: 70px;
-    border: 2px solid rgb(145, 10, 255);
+    border: 2px solid rgba(0, 255, 234, 0.418);
     box-sizing: border-box;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 
@@ -81,18 +83,14 @@ h3 {
     position:absolute;
     top:0;
     right:10%;
+
+    filter: sepia(18%) saturate(2598%) ;
 }
 
 .right-cat{
     position: absolute;
     left: 10%;
     top: 420px;   
-}
 
-.right-cat:hover{
-    filter: sepia(18%) saturate(2598%) ;
-}
-
-.left-cat:hover{
-    filter: sepia(18%) saturate(2598%) ;
+    filter: sepia(88%) saturate(238%) ;
 }

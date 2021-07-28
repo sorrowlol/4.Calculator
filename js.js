@@ -1,6 +1,8 @@
 let calculator = document.querySelectorAll('.buttons');
 let result = document.querySelector('.result');
 let equal = document.querySelector('#equal');
+let clearbutton = document.querySelector('.clearbutton')
+let deletebutton = document.querySelector('.deletebutton')
 
 
    //store result
@@ -50,8 +52,7 @@ calculator.forEach((e) => {
     if (e.id === 'number'){
 
         e.addEventListener('click', () =>{
-            result.textContent += parseInt(e.textContent);
-            displayValue1 = result.textContent;
+            result.textContent += parseInt(e.textContent);;
         });
     }
 
@@ -59,19 +60,35 @@ calculator.forEach((e) => {
         e.addEventListener('click', () => {
             result.textContent += ' ' + e.textContent + ' ';
             operator = e.id;
+
         })
     }
+});
 
-}
-);
+//clear and delete menu
+
+clearbutton.addEventListener('mouseover', ((e) =>{
+    e.target.style.backgroundColor = 'red';
+}))
+clearbutton.addEventListener('mouseout', (e) =>{
+    e.target.style.backgroundColor = 'black';
+})
+
+deletebutton.addEventListener('mouseover', (e) =>{
+    e.target.style.backgroundColor = 'red';
+})
+deletebutton.addEventListener('mouseout', (e) =>{
+    e.target.style.backgroundColor = 'black';
+})
 
 
-    //rainbow effect
+
+    //buttons
 calculator.forEach((x) => {
 
     if (x.id === 'number'){
     x.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = `rgba(${Math.floor(Math.random()*512)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, 1)`;
+        e.target.style.backgroundColor = 'purple';
         });
     }
     x.addEventListener('mouseout', (e) =>{
@@ -85,17 +102,22 @@ calculator.forEach((x) => {
     }
 });
 
-let resultsArr = [];
+let resultsArr;
 
 equal.addEventListener('click', () =>{
     resultsArr = result.textContent.split(' ');
-    }
-);
+    result.textContent = operate(operator, Number(resultsArr[0]), Number(resultsArr[2]))
+});
 
-
-clear.addEventListener('click', () => {
+clearbutton.addEventListener('click', () => {
     result.textContent = '';
 })
 
+let resultsm1;
 
+deletebutton.addEventListener('click', () => {
+    resultsArr = result.textContent;
+    resultsArr = resultsArr.substring(0, resultsArr.length - 1);
+    result.textContent = resultsArr;
 
+})
