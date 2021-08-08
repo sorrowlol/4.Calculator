@@ -1,3 +1,3 @@
 Calculator for The Odin Project.
 
-Preview live <a href="sorrowlol.github.io/calculator">here</a> 👈 
+Preview live <a href="https://www.sorrowlol.github.io/calculator" target="_blank">here</a> 👈 
