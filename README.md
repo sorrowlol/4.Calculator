@@ -1,1 +1,3 @@
-Fourth project for TOP. Started on the 11th of July.
+Calculator for The Odin Project.
+
+Preview live <a href="sorrowlol.github.io/calculator">here</a> 👈 
